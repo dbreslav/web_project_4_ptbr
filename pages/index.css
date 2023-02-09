@@ -8,3 +8,126 @@
     flex-direction: column;
     align-items: center;
   }
+  
+  /* Header */
+  .header {
+    max-width: 880px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+  }
+  
+  .header__logo {
+     max-width: 173px;
+     margin-bottom: 40px;
+  }
+  
+  .header__line {
+    
+    width: 100%;
+    opacity: 0.7;
+    border: 1px solid #545454;
+  }
+  
+  @media only screen and (min-width: 544px) and (max-width: 1024px) {
+    /* Your styles for tablets go here */
+    .header__logo {
+      padding-left: 5%;
+      max-width: 20%;
+      margin-bottom: 32px;
+   }
+  }
+
+  @media only screen and (max-width: 543px) {
+    /* Your styles for cellphones go here */
+    .header {
+      margin-top: 30px;
+    }
+    .header__logo {
+      padding-left: 30px;
+      max-width: 25%;
+      margin-bottom: 32px;
+   }
+  
+
+  }
+
+
+
+
+  /* Profile */
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile__picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .profile__name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .profile__edit_btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+  }
+  
+  .profile__text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Add Button */
+  .add__btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  /* Cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .card {
+    
+  }
+  
+  .card__image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .card__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .card__like {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
