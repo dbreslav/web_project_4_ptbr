@@ -1,3 +1,8 @@
+/* *{
+  border: 1px solid red;
+  
+
+} */
 /* Page */
 .page {
     background-color: #000000;
@@ -7,6 +12,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+
+    margin: 0 auto;
   }
   
   /* Header */
@@ -30,6 +38,138 @@
     border: 1px solid #545454;
   }
   
+  /* Profile */
+  .profile {
+    display: flex;
+    width: 100%;
+    max-width: 880px;
+    margin-bottom: 46px;
+   
+  }
+  
+  .profile__picture {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-top: 35px;
+    min-width: 168px;
+    min-height: 120px;
+  }
+  .profile__data {
+    display: flex;
+   }
+  .profile__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    
+
+  }
+  .profile__name {
+
+
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+    /* font-family: 'Inter'; */
+    /* font-style: normal; */
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1.14;
+    margin: 0 0 16px
+  }
+  .edit__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 125px;
+  }
+  
+  .profile__edit_btn {
+    
+    height: 24px;
+    margin-top: 15px;
+    margin-left: 18px;
+  }
+  
+  .profile__text {
+   
+    padding-left: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+
+  }
+  
+  /* Add Button */
+  .add-btn {
+    
+  }
+
+   /* Cards */
+   .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1.5%;
+    max-width: 880px;
+    margin: 0 2%;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  .card__image {
+    width: 100%;
+   
+  }
+  .card__bottom-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 5%;
+
+  }
+  .card__title {
+    
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color:black;
+  }
+  
+  .card__like_btn{
+    color: black;
+  }
+
+  .card__like {
+    width: 21px;
+    height: 19px;
+    color: black;
+  }
+
+  .footer{
+    display:flex;
+    max-width: 880px;
+    width: 100%;
+    margin: 69px 0 60px;
+  }
+  .footer__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #545454;
+    justify-self: flex-start;
+  }
+  
+
   @media only screen and (min-width: 544px) and (max-width: 1024px) {
     /* Your styles for tablets go here */
     .header__logo {
@@ -37,92 +177,23 @@
       max-width: 20%;
       margin-bottom: 32px;
    }
-  }
-
-  @media only screen and (max-width: 543px) {
-    /* Your styles for cellphones go here */
-    .header {
-      margin-top: 30px;
-    }
-    .header__logo {
-      padding-left: 30px;
-      max-width: 25%;
-      margin-bottom: 32px;
-   }
-  
-
-  }
-
-
-
-
-  /* Profile */
-  .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .profile__picture {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-  }
-  
-  .profile__name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .profile__edit_btn {
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: #fff;
-    border: 1px solid #333;
-    cursor: pointer;
-  }
-  
-  .profile__text {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Add Button */
-  .add__btn {
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: #fff;
-    border: 1px solid #333;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  /* Cards */
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 20px;
-  }
-  
-  .card {
+    .profile {
+      padding-left: 5%;
     
-  }
-  
-  .card__image {
-    width: 100%;
-    height: 200px;
-  }
-  
-  .card__title {
-    font-size: 20px;
+    }
+    .profile__info {
+      margin-top: 40px;
+    }
+    .profile__name {
+      font-size: 32px;
+    }
+
+    .card__title {
+      font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
   }
-  
+
   .card__like {
     width: 50px;
     height: 50px;
@@ -130,4 +201,3 @@
     top: 20px;
     right: 20px;
   }
-  
