@@ -1,0 +1,6 @@
+const editButton = document.querySelector('.profile__edit');
+const popUp = document.querySelector('.pop-up');
+
+editButton.addEventListener('click', () => {
+  popUp.classList.toggle('visible');
+});

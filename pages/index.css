@@ -196,44 +196,114 @@
 
   
   }
-  .form {
-    display: none; /* Hide the form by default */
-    position: fixed; /* Make the form fixed */
-    top: 50%; /* Center the form vertically */
-    left: 50%; /* Center the form horizontally */
-    transform: translate(-50%, -50%); /* Translate the form to the center */
-    background-color: white; /* Set the background color of the form */
-    padding: 20px; /* Add some padding to the form */
-    box-shadow: 0px 0px 10px #ccc; /* Add a shadow to the form */
-    border-radius: 10px; /* Round the corners of the form */
+  @media only screen and (max-width: 543px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
   }
 
+
+
+    .cards{
+  display:block;
+  }
+
+  }
+  .pop-up {
+    
+    /* display: none;  */
+    
+  }
+  .form__close-btn{
+    position: fixed;
+   
+
+  }
+  .form {
+    width: 430px;
+    padding: 34px 36px 36.5px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    
+   
+  }
+  
   .form__title {
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
     color: #000000;
-  }
-
-  .form__elements {
+    margin: 0;
     
   }
-  .form__username {
+  
+  .form__elements {
+    display: flex;
+    flex-direction: column;
+    margin: 54px 0 0 ;
+  }
 
+  
+  .form__username {
+    border: none;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin: 0 0 0;
+    
+  }
+  .form__username::placeholder {
+    color: black;
   }
   .form__info {
-    margin-bottom: 20px; /* Add some margin at the bottom of each input field */
-        /* padding: 10px; /* Add some padding to each input field */
-        width: 100%; /* Make each input field 100% wide */
-        border-radius: 5px; /* Round the corners of each input field */
-        border: 1px solid #ccc; /* Add a border to each input field */
-  } */
-  /* .form__save_btn { */
+    border: none;
+    width: 100%; 
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin: 29px 0 0;
+  } 
+  .form__info::placeholder {
+    color: black;
+  }
+
+.form__line {
+    opacity: 0.2;
+    background-color: #000000;
+    margin-top: 14px;
+    height: 1px;
+}
+
+.form__btn {
+    margin: 48px auto 0;
+    width: 100%;
+    background: #000000;
+    border-radius: 2px;
+}
+.form__save-btn { 
     background-color: black; /* Set the background color of the save button */
-        color: white; /* Set the text color of the save button */
-        padding: 10px 20px; /* Add some padding to the save button */
-        border-radius: 5px; /* Round the corners of the save button */
-        border: none; /* Remove the border from the save button */
-        cursor: pointer; /* Change the cursor to a pointer when hovering over the save button */
       
-  }  */
+    padding: 10px 20px; /* Add some padding to the save button */
+    border-radius: 2px; /* Round the corners of the save button */
+    border: none; /* Remove the border from the save button */
+    /* cursor: pointer;  */
+    margin: 0 auto;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+  }  
