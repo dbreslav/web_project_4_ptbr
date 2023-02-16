@@ -78,11 +78,14 @@
     line-height: 1.14;
     margin: 0 0 16px
   }
-  .edit__button {
+  .add {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 125px;
+  }
+  .add:hover{
+    opacity: 0.6;
   }
   
   .profile__edit_btn {
@@ -90,6 +93,9 @@
     height: 24px;
     margin-top: 15px;
     margin-left: 18px;
+  }
+  .profile__edit_btn:hover{
+    opacity: 0.6;
   }
   
   .profile__text {
@@ -106,7 +112,7 @@
   
   /* Add Button */
   .add-btn {
-    
+    cursor: pointer;
   }
 
    /* Cards */
@@ -147,6 +153,10 @@
   
   .card__like_btn{
     color: black;
+  }
+  .card__like_btn:hover{
+    opacity: 0.5;
+    cursor: pointer;
   }
 
   .card__like {
