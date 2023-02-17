@@ -24,27 +24,32 @@
                     <a href="#" class="profile__edit"><img src="/images/Edit-Btn.png" alt="botao de editar" class="profile__edit_btn" onclick="openPopup()"></a>
                     <div class="pop-up" id="popup">
                         <a href="#" class="form__close"><img src="/images/Close-Icon.png" alt="botao de fechar" class="form__close-btn" onclick="closePopup()"></a>
-                <div class="form">
-                    <h1 class="form__title">Editar Perfil</h1>
-                        <div class="form__elements">
-                            <input type="text" class="form__username" placeholder="Jacques Cousteau" id="username">
-                            <img src="./images/form-line.png" alt="linha" class="form__line">
-                            <input type="text" class="form__info" placeholder="Explorar" id="usertext">
-                            <img src="./images/form-line.png" alt="linha" class="form__line">
-                        </div>
-                    <div class="form__btn">
+                        <div class="form">
+                            <h1 class="form__title">Editar Perfil</h1>
+                                <div class="form__elements">
+                                    <input type="text" class="form__username" placeholder="Jacques Cousteau" id="username">
+                                    <img src="./images/form-line.png" alt="linha" class="form__line">
+                                    <input type="text" class="form__info" placeholder="Explorar" id="usertext">
+                                    <img src="./images/form-line.png" alt="linha" class="form__line">
+                                </div>
+                            <div class="form__btn">
                                 <button class="form__save-btn" id="save-btn" onclick="savePopup()">Salvar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <p class="profile__text" id="profileText">Explorar</p>
             </div>
+            <a href="#" class="add">
+                <img src="/images/Add-Button.png" alt="botao de adicionar" class="add-btn" onclick="" id="addButton">
+            </a>
         </div>
-
         <div class="cards">
             <div class="card">
                 <img src="/images/vale-Yosemite.png" alt="Vale do Yosemite" class="card__image">
                 <div class="card__bottom-bar">
                     <p class="card__title">Vale do Yosemite</p>
-                    <a href="" class="card__like_btn"><img src="/images/like.png" alt="botao de like" class="card__like"></a>
+                    <a href="" class="card__like_btn"><img src="/images/like.png" alt="botao de like" class="card__like" id="likeImage" onclick="toggleImage()"></a>
                 </div>
             </div>
 
@@ -90,6 +95,7 @@
         <footer class="footer">
             <p class="footer__text">&copy; 2021 Around the U.S.</p>
         </footer>
+    </div>
     </div>
     </div>
   <script src="/pages/script.js"></script>  
