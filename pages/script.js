@@ -1,8 +1,12 @@
-const editButton = document.querySelector('.profile__edit');
-const popUp = document.querySelector('.pop-up');
+let popup = document.getElementById("popup");
 
-editButton.addEventListener('click', () => {
-  popUp.classList.toggle('visible');
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+function closePopup() {
+    popup.classList.remove("open-popup");
+};
+
 });
 
 
