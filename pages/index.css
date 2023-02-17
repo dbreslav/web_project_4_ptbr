@@ -1,8 +1,8 @@
-/* *{
+ *{
   border: 1px solid red;
   
 
-} */
+} 
 /* Page */
 .page {
     background-color: #000000;
@@ -87,6 +87,7 @@
   .add:hover{
     opacity: 0.6;
   }
+ 
   
   .profile__edit_btn {
     
@@ -113,6 +114,8 @@
   /* Add Button */
   .add-btn {
     cursor: pointer;
+    background-image: url("/images/Add-Button.png");
+    
   }
 
    /* Cards */
@@ -178,60 +181,39 @@
     color: #545454;
     justify-self: flex-start;
   }
-  
-
-  @media only screen and (min-width: 544px) and (max-width: 1024px) {
-    /* Your styles for tablets go here */
-    .header__logo {
-      padding-left: 5%;
-      max-width: 20%;
-      margin-bottom: 32px;
-   }
-    .profile {
-      padding-left: 5%;
-    
-    }
-    .profile__info {
-      margin-top: 40px;
-    }
-    .profile__name {
-      font-size: 32px;
-    }
-
-    .card__title {
-      font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-
-  
-  }
-  @media only screen and (max-width: 543px) {
-  .profile {
-    flex-direction: column;
-    align-items: center;
-  }
 
 
 
-    .cards{
-  display:block;
-  }
-
-  }
   .pop-up {
     
-    /* display: none;  */
+    display: none;
     
   }
+
+  .open-popup{
+    display: block;
+  }
+
+
   .form__close-btn{
     position: fixed;
-   
+  
+  }
+  
+ 
 
+  
+  .form__close-btn{
+    top: 10%;
+    right: 30%;
+  }
+
+  .form__close:hover{
+    opacity: 0.6;
   }
   .form {
     width: 430px;
-    padding: 34px 36px 36.5px;
+    padding: 34px 36px 36px;
     background: #FFFFFF;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
@@ -243,7 +225,9 @@
     
    
   }
+
   
+   
   .form__title {
     font-weight: 900;
     font-size: 24px;
@@ -252,12 +236,19 @@
     margin: 0;
     
   }
+
+ 
+.form__title{
+  font-size: 18px;
+  line-height: 22px;
+}
   
   .form__elements {
     display: flex;
     flex-direction: column;
     margin: 54px 0 0 ;
   }
+  
 
   
   .form__username {
@@ -294,19 +285,23 @@
     height: 1px;
 }
 
+
 .form__btn {
     margin: 48px auto 0;
     width: 100%;
     background: #000000;
     border-radius: 2px;
 }
+
+
+
 .form__save-btn { 
     background-color: black; /* Set the background color of the save button */
       
     padding: 10px 20px; /* Add some padding to the save button */
     border-radius: 2px; /* Round the corners of the save button */
     border: none; /* Remove the border from the save button */
-    /* cursor: pointer;  */
+    cursor: pointer; 
     margin: 0 auto;
     width: 100%;
     font-weight: 400;
@@ -317,3 +312,98 @@
     color: #FFFFFF;
 
   }  
+  .form__btn:hover {
+  background: #000000;
+  opacity: 0.8;
+  border-radius: 2px;
+}
+
+
+  
+
+  @media only screen and (min-width: 544px) and (max-width: 1024px) {
+    /* Your styles for tablets go here */
+    .header__logo {
+      padding-left: 5%;
+      max-width: 20%;
+      margin-bottom: 32px;
+   }
+    .profile {
+      padding-left: 5%;
+    
+    }
+    .profile__info {
+      margin-top: 40px;
+    }
+    .profile__name {
+      font-size: 32px;
+    }
+
+    .card__title {
+      font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+
+.form__line{
+  margin-top: 9px;
+} 
+.form__close-btn{
+  top: 10%;
+  right: 9%;
+}
+
+  
+  }
+  @media only screen and (max-width: 543px) {
+  .header{
+    margin: 28px 0 0 27px;
+  }
+  .header__logo{ 
+    margin: 0 0 32px;
+  }
+    .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile__picture {
+   
+    margin-bottom: 26px;
+    margin-top: 38px;
+    min-width: 168px;
+    min-height: 127px;
+  }
+  .profile__info {
+   
+    margin: 0;
+    align-items: center;
+  }
+  .profile__name{
+    padding: 0;
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 14px;
+  }
+  .profile__text{
+    padding: 0;
+  }
+  .profile__edit{
+    margin: 0;
+  }
+  .add{
+    margin: 36px 0 0;
+  }
+  .add-btn{
+    background-image: url("/images/addButtonMobile.png");
+    
+  }
+
+  .cards{
+    display:block;
+    margin: 0 3%;
+    }
+
+
+  }
+  
