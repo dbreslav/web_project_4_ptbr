@@ -365,13 +365,13 @@
     max-width: 130px;
   }
     .profile {
+      margin: 42px auto 36px;
     flex-direction: column;
     align-items: center;
   }
   .profile__picture {
    
-    margin-bottom: 26px;
-    margin-top: 38px;
+    margin: 0 auto 26px;
     min-width: 168px;
     min-height: 127px;
   }
@@ -384,12 +384,19 @@
     padding: 0;
     font-size: 22px;
     line-height: 27px;
-    margin-bottom: 14px;
+    margin: 0 auto 14px;
   }
   .profile__text{
+    margin: 0 auto;
     padding: 0;
+    font-size: 14px;
+    line-height: 17px;
+
   }
   .profile__edit{
+    margin: 0 0 14px 10px;
+  }
+  .profile__edit_btn{
     margin: 0;
   }
   .add{
