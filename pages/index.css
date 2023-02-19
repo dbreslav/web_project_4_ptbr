@@ -114,7 +114,6 @@
   /* Add Button */
   .add-btn {
     cursor: pointer;
-    background-image: url("/images/Add-Button.png");
     
   }
 
@@ -402,14 +401,14 @@
   .add{
     margin: 36px 0 0;
   }
-  .add-btn{
-    background-image: url("/images/addButtonMobile.png");
-    
-  }
+ 
+
 
   .cards{
-    display:block;
-    margin: 0 3%;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 4% 50px;
     }
 
 
