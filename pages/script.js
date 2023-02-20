@@ -27,19 +27,17 @@ saveBtn.addEventListener('submit', function(savePopup) {
   });
 
 
-const heart = document.getElementById("likeImage");
+  const likeHeart = document.getElementById('#card__like_btn');
 
-let toggle = true;
 
-heart.addEventListener('click', function toggleImage(){
-    toggle = !toggle;
+  likeHeart.addEventListener('click', function(likeHeart){
+    likeHeart.target.classList.toggle('card__like_btn-on');
 
-    if (toggle){
-        heart.src = '/images/like.png';
-    }else {
-        heart.src= 'images/blackheart.png';
-    }
-    
-});
+  })
+
+
+  
+
+
 
    
