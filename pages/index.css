@@ -1,8 +1,8 @@
- *{
+ /* *{
   border: 1px solid red;
   
 
-} 
+}  */
 .page {
     background-color: #000000;
     font-family: "Inter", sans-serif;
@@ -71,12 +71,23 @@
     line-height: 1.14;
     margin: 0 0 16px
   }
-  
+
   .add {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 125px;
+    align-self: center;
+    background-image: url(/images/Add-Button.png);
+    overflow: visible;
+    padding: 0;
+    background-repeat: no-repeat;
+    color: white;
+    width: 150px;
+    height: 50px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
   }
   .add:hover{
     opacity: 0.6;
@@ -105,20 +116,21 @@
 
   }
   
-  /* Add Button */
+  
+
   .add-btn {
     cursor: pointer;
     
   }
 
-   /* Cards */
+   
    .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 1.5%;
     max-width: 880px;
-    margin: 0 2%;
+  
   }
   
   .card {
@@ -157,7 +169,7 @@
 
   .card__like {
     width: 21px;
-    height: 19px;
+   
     color: black;
   }
 
@@ -165,14 +177,15 @@
     display:flex;
     max-width: 880px;
     width: 100%;
-    margin: 69px 0 60px;
+    margin: 67px 0 60px;
   }
   .footer__text {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
     color: #545454;
-    justify-self: flex-start;
+  
+    
   }
 
 
@@ -312,6 +325,7 @@
 }
 
 
+
   
 
   @media only screen and (min-width: 544px) and (max-width: 1024px) {
@@ -376,7 +390,7 @@
   .profile__name{
     padding: 0;
     font-size: 22px;
-    line-height: 27px;
+    line-height: 0.8;
     margin: 0 auto 14px;
   }
   .profile__text{
@@ -394,6 +408,9 @@
   }
   .add{
     margin: 36px 0 0;
+    background-image: url(/images/addButtonMobile.png);
+    min-width: 282px;
+    
   }
  
 
@@ -407,13 +424,14 @@
     .footer{
       margin: 0 0 36px;
     }
-    }
     .footer__text{
       margin: 0 0 0 3%; 
       font-size: 14px;
       line-height: 17px;
     }
-
+    
+    }
+    
 
   
   
