@@ -229,16 +229,12 @@
 
   .form__close-btn{
     position: fixed;
-  
-  }
-  
- 
+    top: 20%;
+    right: 20%;
 
   
-  .form__close-btn{
-    top: 10%;
-    right: 30%;
   }
+  
 
   .form__close:hover{
     opacity: 0.6;
@@ -408,16 +404,16 @@
   }
 
 
-.form__line{
-  margin-top: 9px;
-} 
-.form__close-btn{
-  top: 10%;
-  right: 9%;
-}
-.footer__text{
-  margin-left: 3%;
-}
+    .form__line{
+      margin-top: 9px;
+    } 
+    .form__close-btn {
+      top: 20%;
+      right: 10%;
+    }
+    .footer__text{
+      margin-left: 3%;
+    }
 
   
   }
@@ -487,9 +483,16 @@
       font-size: 14px;
       line-height: 17px;
     }
+    .form {
+      width: 300px;
+     
+    }
+    .form__close-btn {
+      top: 20%;
+      right: 10%;
     
     }
-    
+  }
 
   
   
