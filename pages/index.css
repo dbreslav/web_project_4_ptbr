@@ -345,6 +345,15 @@
     .profile__name {
       font-size: 32px;
     }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 1.5%;
+      max-width: 880px;
+      margin: 0 3%
+    
+    }
 
     .card__title {
       font-size: 20px;
