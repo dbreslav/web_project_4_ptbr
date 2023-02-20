@@ -22,20 +22,21 @@ function savePopup() {
   profileText.textContent = inputValueUserText;
 }
 saveBtn.addEventListener('submit', function(savePopup) {
-    saveForm.preventDefault(); 
-    saveForm(); 
+    savePopup.preventDefault(); 
+    savePopup(); 
   });
 
 
-  const likeHeart = document.getElementById('card__like_btn-off');
-
-
-  likeHeart.addEventListener('click', function likeHeart(){
-    likeHeart.classList.toggle('card__like_btn-on');
-
-  });
-
-
+  function toggleLikeButton(event) {
+    console.log(event);
+event.target.classList.toggle('card__like_btn-on');
+    
+      
+    }
+  
+  
+  
+  
   
 
 
