@@ -8,23 +8,20 @@ function closePopup() {
 };
 
 
-const saveBtn = document.getElementById("save-btn");
-const userName = document.getElementById("userName");
-const userText = document.getElementById("userText");
-const profileName = document.getElementById("profileName");
-const profileText = document.getElementById("profileText");
 
 function savePopup() {
-  const inputValueUserName = userName.value;
-  const inputValueUserText = userText.value;
+    const usernameInput = document.getElementById('username');
+    const userTextInput = document.getElementById('usertext');
+    const profileName = document.getElementById('profileName');
+    const profileText = document.getElementById('profileText');
+  
+    profileName.textContent = usernameInput.value;
+    profileText.textContent = userTextInput.value;
+  
+    closePopup();
+  }
+  
 
-  profileName.textContent = inputValueUserName;
-  profileText.textContent = inputValueUserText;
-}
-saveBtn.addEventListener('submit', function(savePopup) {
-    savePopup.preventDefault(); 
-    savePopup(); 
-  });
 
 
   function toggleLikeButton(event) {
