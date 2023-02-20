@@ -27,13 +27,13 @@ saveBtn.addEventListener('submit', function(savePopup) {
   });
 
 
-  const likeHeart = document.getElementById('#card__like_btn');
+  const likeHeart = document.getElementById('card__like_btn-off');
 
 
-  likeHeart.addEventListener('click', function(likeHeart){
-    likeHeart.target.classList.toggle('card__like_btn-on');
+  likeHeart.addEventListener('click', function likeHeart(){
+    likeHeart.classList.toggle('card__like_btn-on');
 
-  })
+  });
 
 
   
