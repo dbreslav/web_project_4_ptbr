@@ -1,0 +1,12 @@
+.form__btn {
+  margin: 48px auto 0;
+  width: 100%;
+  background: #000000;
+  border-radius: 2px;
+}
+
+.form__btn:hover {
+  background: #000000;
+  opacity: 0.8;
+  border-radius: 2px;
+}

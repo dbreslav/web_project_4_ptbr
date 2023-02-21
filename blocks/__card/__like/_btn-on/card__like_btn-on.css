@@ -1,0 +1,13 @@
+.card__like_btn-on {
+  width: 21px;
+  height: 19px;
+  color: black;
+  background-image: url(/images/blackheart.png);
+  color: black;
+  background-color: inherit;
+  border: none;
+}
+.card__like_btn-on:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

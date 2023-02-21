@@ -1,0 +1,19 @@
+.profile__picture {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  margin-top: 35px;
+  min-width: 168px;
+  min-height: 120px;
+}
+@media only screen and (min-width: 544px) and (max-width: 1024px) {
+  .profile__picture {
+    align-self: center;
+  }
+}
+@media only screen and (max-width: 543px) {
+  .profile__picture {
+    margin: 0 auto 26px;
+    min-height: 127px;
+  }
+}

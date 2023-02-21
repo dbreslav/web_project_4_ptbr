@@ -1,0 +1,13 @@
+.form__info {
+  border: none;
+  width: 100%;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  margin: 29px 0 0;
+}
+.form__info::placeholder {
+  color: black;
+}
