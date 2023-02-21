@@ -2,12 +2,17 @@
 
 ### Visão geral
 
-* Figma
-* Imagens
+Este projeto foi usado para testar minha abilidades no JS.
+Aqui esta o link para meu projeto. \\
+
+dbreslav.github.io.
+
+- Figma
+- Imagens
 
 **Figma**
 
-* [Link para o projeto no Figma](https://www.figma.com/file/XfB6BSINvliub43JgKza1e/WEB.-Sprint-4.-Around-The-U.S.-desktop-%2B-mobile-pt)
+- [Link para o projeto no Figma](https://www.figma.com/file/XfB6BSINvliub43JgKza1e/WEB.-Sprint-4.-Around-The-U.S.-desktop-%2B-mobile-pt)
 
 **Imagens**
 
