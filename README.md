@@ -13,4 +13,4 @@ Além disso, outras funções aprendidas em aulas anteriores podem ser utilizada
 Como contribuir
 Caso queira contribuir com o projeto, sinta-se livre para fazer um fork deste repositório e enviar suas alterações por meio de um pull request. Serão sempre bem-vindas sugestões de melhoria e correções de erros.
 
-Adicionalmente, o link para acessar o projeto está disponível em: dbreslav.github.io.
+Adicionalmente, o link para acessar o projeto está disponível em: https://dbreslav.github.io/web_project_4_ptbr/
