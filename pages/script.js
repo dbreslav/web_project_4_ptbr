@@ -1,11 +1,29 @@
-let popup = document.getElementById("popup");
+const popup = document.getElementById("popup");
+const closePopup = document.getElementById("closeBtn");
+const editButton = document.getElementById("editButton");
 
-function openPopup() {
-  popup.classList.add("open-popup");
-}
-function closePopup() {
-  popup.classList.remove("open-popup");
-}
+//function open popup
+
+let isPopupVisible = false;
+
+editButton.addEventListener("click", function () {
+  if (isPopupVisible) {
+    popup.style.display = "none";
+    isPopupVisible = false;
+  } else {
+    popup.style.display = "block";
+    isPopupVisible = true;
+  }
+});
+
+//function closepopup
+
+//function openPopup() {
+// popup.classList.add("open-popup");
+//}
+//function closePopup() {
+// popup.classList.remove("open-popup");
+//}
 
 function savePopup() {
   const usernameInput = document.getElementById("username");
@@ -18,8 +36,11 @@ function savePopup() {
 
   closePopup();
 }
-
-function toggleLikeButton(event) {
-  console.log(event);
-  event.target.classList.toggle("card__like_btn-on");
+//toggle function for like hearts
+const likeButtons = document.querySelectorAll(".heart-off");
+for (let likeButton of likeButtons) {
+  likeButton.addEventListener("click", function (event) {
+    console.log(event);
+    event.target.classList.toggle("heart-on");
+  });
 }
