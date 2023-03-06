@@ -3,3 +3,8 @@
   flex-direction: column;
   margin: 54px 0 0;
 }
+@media only screen and (max-width: 543px) {
+  .form__elements {
+    margin: 74px 0 0;
+  }
+}
