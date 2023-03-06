@@ -17,13 +17,17 @@ editButton.addEventListener("click", function () {
 });
 
 //function closepopup
+closePopup.addEventListener("click", function () {
+  if (isPopupVisible) {
+    popup.style.display = "none";
+    isPopupVisible = false;
+  } else {
+    popup.style.display = "block";
+    isPopupVisible = true;
+  }
+});
 
-//function openPopup() {
-// popup.classList.add("open-popup");
-//}
-//function closePopup() {
-// popup.classList.remove("open-popup");
-//}
+//Function Save
 
 function savePopup() {
   const usernameInput = document.getElementById("username");
@@ -34,8 +38,14 @@ function savePopup() {
   profileName.textContent = usernameInput.value;
   profileText.textContent = userTextInput.value;
 
-  closePopup();
+  isPopupVisible = false;
+  popup.style.display = "none";
 }
+
+const savePopupButton = document.getElementById("save-btn");
+
+savePopupButton.addEventListener("click", savePopup);
+
 //toggle function for like hearts
 const likeButtons = document.querySelectorAll(".heart-off");
 for (let likeButton of likeButtons) {
