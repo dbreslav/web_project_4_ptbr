@@ -1,0 +1,13 @@
+.heart-on {
+  width: 21px;
+  height: 19px;
+  color: black;
+  background-image: url(../../images/blackheart.png);
+  color: black;
+  background-color: inherit;
+  border: none;
+}
+.heart-on:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

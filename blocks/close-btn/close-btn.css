@@ -1,0 +1,22 @@
+.close-btn {
+  position: fixed;
+  top: 22%;
+  right: 25%;
+  background-image: url(../../images/Close-Icon.png);
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+}
+.close-btn:hover {
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 544px) and (max-width: 1024px),
+  only screen and (max-width: 543px) {
+  .close-btn {
+    right: 5%;
+    background-image: url(../../images/closeIconMobile.png);
+  }
+}
