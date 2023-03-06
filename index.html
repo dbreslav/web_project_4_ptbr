@@ -24,21 +24,9 @@
         <div class="profile__info">
           <div class="profile__data">
             <p class="profile__name" id="profileName">Jacques Cousteau</p>
-            <a href="#" class="profile__edit"
-              ><img
-                src="./images/Edit-Btn.png"
-                alt="botao de editar"
-                class="profile__edit_btn"
-                onclick="openPopup()"
-            /></a>
-            <div class="pop-up" id="popup">
-              <a href="#" class="form__close"
-                ><img
-                  src="/images/Close-Icon.png"
-                  alt="botao de fechar"
-                  class="form__close-btn"
-                  onclick="closePopup()"
-              /></a>
+            <button class="edit-btn" id="editButton"></button>
+            <div class="popup" id="popup">
+              <button class="close-btn" id="closeBtn"></button>
               <div class="form">
                 <h1 class="form__title">Editar Perfil</h1>
                 <div class="form__elements">
@@ -48,32 +36,17 @@
                     placeholder="Jacques Cousteau"
                     id="username"
                   />
-                  <img
-                    src="./images/form-line.png"
-                    alt="linha"
-                    class="form__line"
-                  />
                   <input
                     type="text"
                     class="form__info"
                     placeholder="Explorar"
                     id="usertext"
                   />
-                  <img
-                    src="./images/form-line.png"
-                    alt="linha"
-                    class="form__line"
-                  />
                 </div>
-                <div class="form__btn">
-                  <button
-                    class="form__save-btn"
-                    id="save-btn"
-                    onclick="savePopup()"
-                  >
-                    Salvar
-                  </button>
-                </div>
+
+                <button class="save-btn" id="save-btn" type="submit">
+                  Salvar
+                </button>
               </div>
             </div>
           </div>
@@ -90,10 +63,7 @@
           />
           <div class="card__bottom-bar">
             <p class="card__title">Vale do Yosemite</p>
-            <button
-              class="card__like_btn-off"
-              onclick="toggleLikeButton(event)"
-            ></button>
+            <button class="heart-off"></button>
           </div>
         </div>
 
@@ -105,10 +75,7 @@
           />
           <div class="card__bottom-bar">
             <p class="card__title">Lago Louise</p>
-            <button
-              class="card__like_btn-off"
-              onclick="toggleLikeButton(event)"
-            ></button>
+            <button class="heart-off"></button>
           </div>
         </div>
 
@@ -120,10 +87,7 @@
           />
           <div class="card__bottom-bar">
             <p class="card__title">Montanhas Care...</p>
-            <button
-              class="card__like_btn-off"
-              onclick="toggleLikeButton(event)"
-            ></button>
+            <button class="heart-off"></button>
           </div>
         </div>
 
@@ -131,10 +95,7 @@
           <img src="./images/latemar.png" alt="Latemar" class="card__image" />
           <div class="card__bottom-bar">
             <p class="card__title">Latemar</p>
-            <button
-              class="card__like_btn-off"
-              onclick="toggleLikeButton(event)"
-            ></button>
+            <button class="heart-off"></button>
           </div>
         </div>
 
@@ -146,10 +107,7 @@
           />
           <div class="card__bottom-bar">
             <p class="card__title">Vanoise National</p>
-            <button
-              class="card__like_btn-off"
-              onclick="toggleLikeButton(event)"
-            ></button>
+            <button class="heart-off"></button>
           </div>
         </div>
 
@@ -161,10 +119,7 @@
           />
           <div class="card__bottom-bar">
             <p class="card__title">Lago di Braies</p>
-            <button
-              class="card__like_btn-off"
-              onclick="toggleLikeButton(event)"
-            ></button>
+            <button class="heart-off"></button>
           </div>
         </div>
       </div>
