@@ -1,6 +1,6 @@
-const popup = document.getElementById("popup");
-const closePopup = document.getElementById("closeBtn");
-const editButton = document.getElementById("editButton");
+const popup = document.querySelector(".popup");
+const closePopup = document.querySelector(".close-btn");
+const editButton = document.querySelector(".edit-btn");
 
 //function open popup
 
@@ -50,7 +50,6 @@ savePopupButton.addEventListener("click", savePopup);
 const likeButtons = document.querySelectorAll(".heart-off");
 for (let likeButton of likeButtons) {
   likeButton.addEventListener("click", function (event) {
-    console.log(event);
     event.target.classList.toggle("heart-on");
   });
 }
