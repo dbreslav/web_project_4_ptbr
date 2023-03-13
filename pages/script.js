@@ -2,30 +2,18 @@ const popup = document.querySelector(".popup");
 const closePopup = document.querySelector(".close-btn");
 const editButton = document.querySelector(".edit-btn");
 
-//function open popup
+//function open/close popup
 
-let isPopupVisible = false;
-
-editButton.addEventListener("click", function () {
-  if (isPopupVisible) {
-    popup.style.display = "none";
-    isPopupVisible = false;
-  } else {
+function togglePopup() {
+  if (popup.style.display === "none") {
     popup.style.display = "block";
-    isPopupVisible = true;
-  }
-});
-
-//function closepopup
-closePopup.addEventListener("click", function () {
-  if (isPopupVisible) {
-    popup.style.display = "none";
-    isPopupVisible = false;
   } else {
-    popup.style.display = "block";
-    isPopupVisible = true;
+    popup.style.display = "none";
   }
-});
+}
+
+editButton.addEventListener("click", togglePopup);
+closePopup.addEventListener("click", togglePopup);
 
 //Function Save
 
