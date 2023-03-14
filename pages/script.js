@@ -17,7 +17,8 @@ closePopup.addEventListener("click", togglePopup);
 
 //Function Save
 
-function savePopup() {
+function savePopup(evt) {
+  evt.preventDefault();
   const usernameInput = document.getElementById("username");
   const userTextInput = document.getElementById("usertext");
   const profileName = document.getElementById("profileName");
