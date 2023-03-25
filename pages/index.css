@@ -28,6 +28,8 @@
 @import url(../blocks/card/__image/card__image.css);
 @import url(../blocks/card/__bottom-bar/card__bottom-bar.css);
 
+@import url(../blocks/trash-btn/trash-btn.css);
+
 @import url(../blocks/popup/popup.css);
 
 @import url(../blocks/open-popup/open-popup.css);
