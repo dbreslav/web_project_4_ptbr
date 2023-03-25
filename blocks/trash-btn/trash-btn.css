@@ -3,8 +3,12 @@
   width: 21px;
   height: 19px;
   color: white;
-  background-color: inherit;
+  background-repeat: no-repeat;
   border: none;
+  padding: 0;
+  top: 10px;
+  right: 10px;
+  position: absolute;
 }
 
 .trash-btn:hover {
