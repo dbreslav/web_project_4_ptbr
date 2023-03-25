@@ -35,14 +35,6 @@ const savePopupButton = document.getElementById("save-btn");
 
 savePopupButton.addEventListener("click", savePopup);
 
-//toggle function for like hearts
-const likeButtons = document.querySelectorAll(".heart-off");
-for (let likeButton of likeButtons) {
-  likeButton.addEventListener("click", function (event) {
-    event.target.classList.toggle("heart-on");
-  });
-}
-
 //function add cards
 
 const cardsContainer = document.getElementsByClassName("cards")[0];
@@ -113,3 +105,11 @@ function addCards() {
 }
 
 addCards();
+
+//toggle function for like hearts
+const likeButtons = cardsContainer.querySelectorAll(".heart-off");
+for (let likeButton of likeButtons) {
+  likeButton.addEventListener("click", function (event) {
+    event.target.classList.toggle("heart-on");
+  });
+}
