@@ -1,0 +1,13 @@
+.trash-btn {
+  background: url(../../images/Trash.png);
+  width: 21px;
+  height: 19px;
+  color: white;
+  background-color: inherit;
+  border: none;
+}
+
+.trash-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
