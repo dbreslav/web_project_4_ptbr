@@ -1,6 +1,7 @@
 const popup = document.querySelector(".popup");
 const closePopup = document.querySelector(".close-btn");
 const editButton = document.querySelector(".edit-btn");
+const trashBtn = document.querySelector(".trash-btn");
 
 //function open/close popup
 
@@ -35,7 +36,7 @@ const savePopupButton = document.getElementById("save-btn");
 
 savePopupButton.addEventListener("click", savePopup);
 
-//function add cards
+//function add and remove cards
 
 const cardsContainer = document.getElementsByClassName("cards")[0];
 
@@ -101,6 +102,11 @@ function addCards() {
     cardElement.appendChild(bottomBar);
     cardElement.appendChild(trashBtn);
     cardsContainer.appendChild(cardElement);
+
+    trashBtn.addEventListener("click", function () {
+      const parentCard = this.closest(".card");
+      parentCard.remove();
+    });
   });
 }
 
