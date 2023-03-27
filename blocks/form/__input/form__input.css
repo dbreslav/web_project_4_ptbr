@@ -1,20 +1,18 @@
 .form__input {
   border: none;
-  width: 100%;
   padding: 0 0 14px;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #000000;
-  margin: 29px 0 48px;
+  margin: 0 0 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .form__input::placeholder {
   color: black;
 }
-@media only screen and (min-width: 544px) and (max-width: 1024px),
-  only screen and (max-width: 543px) {
+@media only screen and (min-width: 544px) and (max-width: 1024px) {
   .form__input {
-    padding: 0 0 9px;
+    padding-top: 9px;
   }
 }
