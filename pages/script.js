@@ -87,7 +87,7 @@ function addCards() {
 
     const cardTitle = document.createElement("p");
     cardTitle.classList.add("card__title");
-    cardTitle.src = card.name;
+    cardTitle.textContent = card.name;
 
     const likeBtn = document.createElement("button");
     likeBtn.classList.add("heart-off");
