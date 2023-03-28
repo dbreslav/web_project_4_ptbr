@@ -1,7 +1,13 @@
 const popup = document.querySelector(".popup");
 const closePopup = document.querySelector(".close-btn");
 const editButton = document.querySelector(".edit-btn");
+<<<<<<< HEAD
 const trashBtn = document.querySelector(".trash-btn");
+=======
+const addPopup = document.querySelector(".add-popup");
+const addPopupBtn = document.querySelector(".add");
+const closeAddBtn = document.querySelector("#closeAddBtn");
+>>>>>>> popupform
 
 //function open/close popup
 
@@ -16,7 +22,20 @@ function togglePopup() {
 editButton.addEventListener("click", togglePopup);
 closePopup.addEventListener("click", togglePopup);
 
-//Function Save
+//function open/ close AddPopup
+
+function toggleAddPopup() {
+  if (addPopup.style.display === "none") {
+    addPopup.style.display = "block";
+  } else {
+    addPopup.style.display = "none";
+  }
+}
+
+addPopupBtn.addEventListener("click", toggleAddPopup);
+closeAddBtn.addEventListener("click", toggleAddPopup);
+
+//Function SaveEditForm
 
 function savePopup(evt) {
   evt.preventDefault();
@@ -36,7 +55,35 @@ const savePopupButton = document.getElementById("save-btn");
 
 savePopupButton.addEventListener("click", savePopup);
 
+<<<<<<< HEAD
 //function add and remove cards
+=======
+// function saveAddForm
+
+function saveAddForm(evt) {
+  evt.preventDefault();
+  const userPlaceTitle = document.getElementById("userPlaceTitle");
+  const userPixUrl = document.getElementById("userPixUrl");
+  const placeName = document.getElementsByClassName("card__image");
+  const placeUrl = document.getElementsByClassName("card__title");
+
+  for (let i = 0; i < placeName.length; i++) {
+    placeName[i].textContent = userPlaceTitle.value;
+  }
+  for (let i = 0; i < placeUrl.length; i++) {
+    placeUrl[i].textContent = userPixUrl.value;
+  }
+
+  isPopupVisible = false;
+  addPopup.style.display = "none";
+}
+
+const addFormSaveBtn = document.getElementById("addFormSaveBtn");
+
+addFormSaveBtn.addEventListener("click", saveAddForm);
+
+//function add cards
+>>>>>>> popupform
 
 const cardsContainer = document.getElementsByClassName("cards")[0];
 
@@ -102,11 +149,14 @@ function addCards() {
     cardElement.appendChild(bottomBar);
     cardElement.appendChild(trashBtn);
     cardsContainer.appendChild(cardElement);
+<<<<<<< HEAD
 
     trashBtn.addEventListener("click", function () {
       const parentCard = this.closest(".card");
       parentCard.remove();
     });
+=======
+>>>>>>> popupform
   });
 }
 
