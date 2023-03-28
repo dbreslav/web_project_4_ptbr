@@ -1,13 +1,10 @@
 const popup = document.querySelector(".popup");
 const closePopup = document.querySelector(".close-btn");
 const editButton = document.querySelector(".edit-btn");
-<<<<<<< HEAD
 const trashBtn = document.querySelector(".trash-btn");
-=======
 const addPopup = document.querySelector(".add-popup");
 const addPopupBtn = document.querySelector(".add");
 const closeAddBtn = document.querySelector("#closeAddBtn");
->>>>>>> popupform
 
 //function open/close popup
 
@@ -55,9 +52,6 @@ const savePopupButton = document.getElementById("save-btn");
 
 savePopupButton.addEventListener("click", savePopup);
 
-<<<<<<< HEAD
-//function add and remove cards
-=======
 // function saveAddForm
 
 function saveAddForm(evt) {
@@ -83,7 +77,6 @@ const addFormSaveBtn = document.getElementById("addFormSaveBtn");
 addFormSaveBtn.addEventListener("click", saveAddForm);
 
 //function add cards
->>>>>>> popupform
 
 const cardsContainer = document.getElementsByClassName("cards")[0];
 
@@ -149,14 +142,11 @@ function addCards() {
     cardElement.appendChild(bottomBar);
     cardElement.appendChild(trashBtn);
     cardsContainer.appendChild(cardElement);
-<<<<<<< HEAD
 
     trashBtn.addEventListener("click", function () {
       const parentCard = this.closest(".card");
       parentCard.remove();
     });
-=======
->>>>>>> popupform
   });
 }
 
@@ -164,6 +154,7 @@ addCards();
 
 //toggle function for like hearts
 const likeButtons = cardsContainer.querySelectorAll(".heart-off");
+
 for (let likeButton of likeButtons) {
   likeButton.addEventListener("click", function (event) {
     event.target.classList.toggle("heart-on");
