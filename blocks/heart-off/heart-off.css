@@ -6,9 +6,19 @@
   color: black;
   background-color: inherit;
   border: none;
+  position: absolute;
+  bottom: 15%;
+  right: 4%;
 }
 
 .heart-off:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 544px) and (max-width: 1024px),
+  only screen and (max-width: 543px) {
+  .heart-off {
+    bottom: unset;
+  }
 }
