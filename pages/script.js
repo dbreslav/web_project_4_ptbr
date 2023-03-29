@@ -5,6 +5,8 @@ const trashBtn = document.querySelector(".trash-btn");
 const addPopup = document.querySelector(".add-popup");
 const addPopupBtn = document.querySelector(".add");
 const closeAddBtn = document.querySelector("#closeAddBtn");
+const createCardBtn = document.getElementById("addFormSaveBtn");
+const userPlaceTitle = document.getElementById("userPlaceTitle");
 
 //function open/close popup
 
@@ -92,7 +94,7 @@ const initialCards = [
     alt: "Vista do Lago Louise no Parque Nacional de Banff",
   },
   {
-    name: "Montanhas Carecas",
+    name: "Montanhas Car...",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg",
     alt: "Vista das Montanhas Carecas",
   },
@@ -149,8 +151,9 @@ function addCards() {
     });
   });
 }
-
 addCards();
+
+//function for clicking images
 
 //toggle function for like hearts
 const likeButtons = cardsContainer.querySelectorAll(".heart-off");
