@@ -1,4 +1,4 @@
-.popup {
+.add-form {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
   transition: visibility 2s linear, opacity 1s linear;
   overflow: hidden;
 }
-.popup.visible {
+.add-form.visible {
   pointer-events: auto;
   opacity: 1;
   height: 100%;
