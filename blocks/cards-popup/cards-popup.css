@@ -1,0 +1,24 @@
+.cards-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  /* visibility: hidden;
+  display: none;
+  opacity: 0;
+  height: 0; */
+  z-index: 3;
+  transition: visibility 2s linear, opacity 1s linear;
+  overflow: hidden;
+}
+.cards-popup.visible {
+  pointer-events: auto;
+  display: block;
+  opacity: 1;
+  height: 100%;
+  visibility: visible;
+  transition: visibility 0 linear, opacity 1s linear;
+}

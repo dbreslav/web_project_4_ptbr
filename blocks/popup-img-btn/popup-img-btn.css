@@ -1,0 +1,26 @@
+.popup-img-btn {
+  position: fixed;
+  top: -5%;
+  right: -8%;
+  background-image: url(../../images/Close-Icon.png);
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+}
+.popup-img-btn:hover {
+  opacity: 0.6;
+}
+.popup-img-btn.visible {
+  height: 100%;
+}
+
+@media screen and (min-width: 544px) and (max-width: 1024px),
+  only screen and (max-width: 543px) {
+  .popup-img-btn {
+    right: -5%;
+    top: -10%;
+    background-image: url(../../images/closeIconMobile.png);
+  }
+}

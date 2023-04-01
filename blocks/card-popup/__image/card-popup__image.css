@@ -1,0 +1,11 @@
+.card-popup__image {
+  max-width: 75vw;
+  max-height: 75vh;
+  width: 100%;
+}
+
+@media only screen and (max-width: 543px) {
+  .card-popup__image {
+    min-width: 75vw;
+  }
+}

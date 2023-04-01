@@ -1,12 +1,12 @@
 .page {
-    background-color: #000000;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
+  background-color: #000000;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
