@@ -1,34 +1,25 @@
 const popup = document.querySelector(".popup");
-const closePopup = document.querySelector(".close-btn");
+const closePopup = document.querySelector(".popup .close-btn");
 const editButton = document.querySelector(".edit-btn");
 const trashBtn = document.querySelector(".trash-btn");
-const addPopup = document.querySelector(".add-popup");
+const addPopup = document.querySelector(".add-form");
 const addPopupBtn = document.querySelector(".add");
-const closeAddBtn = document.querySelector("#closeAddBtn");
+const closeAddBtn = document.querySelector(".close-add-btn");
 const createCardBtn = document.getElementById("addFormSaveBtn");
 const userPlaceTitle = document.getElementById("userPlaceTitle");
 
 //function open/close popup
 
 function togglePopup() {
-  if (popup.style.display === "none") {
-    popup.style.display = "block";
-  } else {
-    popup.style.display = "none";
-  }
+  popup.classList.toggle("visible");
 }
-
 editButton.addEventListener("click", togglePopup);
 closePopup.addEventListener("click", togglePopup);
 
-//function open/ close AddPopup
+//function opne/close AddPopup
 
 function toggleAddPopup() {
-  if (addPopup.style.display === "none") {
-    addPopup.style.display = "block";
-  } else {
-    addPopup.style.display = "none";
-  }
+  addPopup.classList.toggle("visible");
 }
 
 addPopupBtn.addEventListener("click", toggleAddPopup);
@@ -36,51 +27,54 @@ closeAddBtn.addEventListener("click", toggleAddPopup);
 
 //Function SaveEditForm
 
-function savePopup(evt) {
-  evt.preventDefault();
-  const usernameInput = document.getElementById("username");
-  const userTextInput = document.getElementById("usertext");
-  const profileName = document.getElementById("profileName");
-  const profileText = document.getElementById("profileText");
+// function savePopup(evt) {
+//   evt.preventDefault();
+//   const usernameInput = document.getElementById("username");
+//   const userTextInput = document.getElementById("usertext");
+//   const profileName = document.getElementById("profileName");
+//   const profileText = document.getElementById("profileText");
 
-  profileName.textContent = usernameInput.value;
-  profileText.textContent = userTextInput.value;
+//   profileName.textContent = usernameInput.value;
+//   profileText.textContent = userTextInput.value;
 
-  isPopupVisible = false;
-  popup.style.display = "none";
-}
+//   isPopupVisible = false;
+//   popup.style.display = "none";
+// }
 
-const savePopupButton = document.getElementById("save-btn");
+// const savePopupButton = document.getElementById("save-btn");
 
-savePopupButton.addEventListener("click", savePopup);
+// savePopupButton.addEventListener("click", savePopup);
 
 // function saveAddForm
+//function saveAddForm(evt) {
+//  evt.preventDefault();
+//  const userPlaceTitle = document.getElementById("userPlaceTitle");
+//  const userPixUrl = document.getElementById("userPixUrl");
+// const placeName = document.getElementsByClassName("card__image");
+//const placeUrl = document.getElementsByClassName("card__title");
 
-function saveAddForm(evt) {
-  evt.preventDefault();
-  const userPlaceTitle = document.getElementById("userPlaceTitle");
-  const userPixUrl = document.getElementById("userPixUrl");
-  const placeName = document.getElementsByClassName("card__image");
-  const placeUrl = document.getElementsByClassName("card__title");
+// for (let i = 0; i < placeName.length; i++) {
+//   placeName[i].textContent = userPlaceTitle.value;
+// }
+// for (let i = 0; i < placeUrl.length; i++) {
+//   placeUrl[i].textContent = userPixUrl.value;
+// }
 
-  for (let i = 0; i < placeName.length; i++) {
-    placeName[i].textContent = userPlaceTitle.value;
-  }
-  for (let i = 0; i < placeUrl.length; i++) {
-    placeUrl[i].textContent = userPixUrl.value;
-  }
+// isPopupVisible = false;
+// addPopup.style.display = "none";
 
-  isPopupVisible = false;
-  addPopup.style.display = "none";
-}
+// const addFormSaveBtn = document.getElementById("addFormSaveBtn");
 
-const addFormSaveBtn = document.getElementById("addFormSaveBtn");
+// addFormSaveBtn.addEventListener("click", saveAddForm);
 
-addFormSaveBtn.addEventListener("click", saveAddForm);
+//function cards
 
-//function add cards
-
-const cardsContainer = document.getElementsByClassName("cards")[0];
+// function saveAddForm(evt) {
+//   evt.preventDefault();
+//   const userPlaceTitle = document.getElementById("userPlaceTitle");
+//   const userPixUrl = document.getElementById("userPixUrl");
+//   const placeName = document.getElementsByClassName("card__image");
+//   const placeUrl = document.getElementsByClassName("card__title");
 
 const initialCards = [
   {
@@ -114,7 +108,7 @@ const initialCards = [
     alt: "Vista do Lago di Braies na Itália",
   },
 ];
-
+const cardsContainer = document.getElementsByClassName("cards")[0];
 function addCards() {
   initialCards.forEach((card) => {
     const cardElement = document.createElement("div");
@@ -153,7 +147,43 @@ function addCards() {
 }
 addCards();
 
-//function for clicking images
+const cardsPopup = document.getElementsByClassName("cards-popup")[0];
+
+function createImgCard() {
+  initialCards.forEach((card) => {
+    const cardImg = document.createElement("div");
+    cardImg.classList.add("card-popup");
+
+    const closeImgBtn = document.createElement("button");
+    closeImgBtn.classList.add("popup-img-btn");
+
+    const imageElement = document.createElement("img");
+    imageElement.classList.add("card-popup__image");
+    imageElement.src = card.link;
+    imageElement.alt = card.alt;
+
+    const imageTitle = document.createElement("p");
+    imageTitle.classList.add("card-popup__title");
+    imageTitle.textContent = card.name;
+
+    cardImg.appendChild(imageElement);
+    cardImg.appendChild(closeImgBtn);
+    cardImg.appendChild(imageTitle);
+    cardsPopup.appendChild(cardImg);
+
+    function toggleCardImagePopup() {
+      cardImg.classList.toggle("visible");
+    }
+
+    imageElement.addEventListener("click", toggleCardImagePopup);
+
+    closeImgBtn.addEventListener("click", toggleCardImagePopup);
+  });
+}
+
+createImgCard();
+
+// criar funcao toggle pro cartao passando o addEventListener pro botao close-popup-img com soft openning and closing
 
 //toggle function for like hearts
 const likeButtons = cardsContainer.querySelectorAll(".heart-off");
