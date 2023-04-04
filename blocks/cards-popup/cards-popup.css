@@ -6,10 +6,10 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   pointer-events: none;
-  /* visibility: hidden;
+  visibility: hidden;
   display: none;
   opacity: 0;
-  height: 0; */
+  height: 0;
   z-index: 3;
   transition: visibility 2s linear, opacity 1s linear;
   overflow: hidden;
