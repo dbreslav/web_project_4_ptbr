@@ -1,5 +1,5 @@
 const popup = document.querySelector(".popup");
-const closePopup = document.querySelector(".popup .close-btn");
+const closePopup = document.querySelector(".close-btn");
 const editButton = document.querySelector(".edit-btn");
 const trashBtn = document.querySelector(".trash-btn");
 const addPopup = document.querySelector(".add-form");
@@ -25,56 +25,7 @@ function toggleAddPopup() {
 addPopupBtn.addEventListener("click", toggleAddPopup);
 closeAddBtn.addEventListener("click", toggleAddPopup);
 
-//Function SaveEditForm
-
-// function savePopup(evt) {
-//   evt.preventDefault();
-//   const usernameInput = document.getElementById("username");
-//   const userTextInput = document.getElementById("usertext");
-//   const profileName = document.getElementById("profileName");
-//   const profileText = document.getElementById("profileText");
-
-//   profileName.textContent = usernameInput.value;
-//   profileText.textContent = userTextInput.value;
-
-//   isPopupVisible = false;
-//   popup.style.display = "none";
-// }
-
-// const savePopupButton = document.getElementById("save-btn");
-
-// savePopupButton.addEventListener("click", savePopup);
-
-// function saveAddForm
-//function saveAddForm(evt) {
-//  evt.preventDefault();
-//  const userPlaceTitle = document.getElementById("userPlaceTitle");
-//  const userPixUrl = document.getElementById("userPixUrl");
-// const placeName = document.getElementsByClassName("card__image");
-//const placeUrl = document.getElementsByClassName("card__title");
-
-// for (let i = 0; i < placeName.length; i++) {
-//   placeName[i].textContent = userPlaceTitle.value;
-// }
-// for (let i = 0; i < placeUrl.length; i++) {
-//   placeUrl[i].textContent = userPixUrl.value;
-// }
-
-// isPopupVisible = false;
-// addPopup.style.display = "none";
-
-// const addFormSaveBtn = document.getElementById("addFormSaveBtn");
-
-// addFormSaveBtn.addEventListener("click", saveAddForm);
-
-//function cards
-
-// function saveAddForm(evt) {
-//   evt.preventDefault();
-//   const userPlaceTitle = document.getElementById("userPlaceTitle");
-//   const userPixUrl = document.getElementById("userPixUrl");
-//   const placeName = document.getElementsByClassName("card__image");
-//   const placeUrl = document.getElementsByClassName("card__title");
+//function initialCards
 
 const initialCards = [
   {
@@ -108,11 +59,18 @@ const initialCards = [
     alt: "Vista do Lago di Braies na Itália",
   },
 ];
+
 const cardsContainer = document.getElementsByClassName("cards")[0];
+const cardImgPopup = document.getElementsByClassName("card");
+const imageElement = document.getElementsByClassName("card__image");
+const bottomBar = document.getElementsByClassName("card__bottom-bar");
+const cardTitle = document.getElementsByClassName("card__title");
+const likeBtn = document.getElementsByClassName("heart-off");
+
 function addCards() {
   initialCards.forEach((card) => {
-    const cardElement = document.createElement("div");
-    cardElement.classList.add("card");
+    const cardImgPopup = document.createElement("li");
+    cardImgPopup.classList.add("card");
 
     const imageElement = document.createElement("img");
     imageElement.classList.add("card__image");
@@ -134,18 +92,53 @@ function addCards() {
 
     bottomBar.appendChild(cardTitle);
     bottomBar.appendChild(likeBtn);
-    cardElement.appendChild(imageElement);
-    cardElement.appendChild(bottomBar);
-    cardElement.appendChild(trashBtn);
-    cardsContainer.appendChild(cardElement);
-
+    cardImgPopup.appendChild(imageElement);
+    cardImgPopup.appendChild(bottomBar);
+    cardImgPopup.appendChild(trashBtn);
+    cardsContainer.appendChild(cardImgPopup);
     trashBtn.addEventListener("click", function () {
       const parentCard = this.closest(".card");
       parentCard.remove();
     });
   });
 }
+
 addCards();
+
+//function that appends a new card with user info
+
+const addForm = document.querySelector(".add-form");
+const addFormSaveBtn = document.querySelector("#addFormSaveBtn");
+const cardTemplate = document.querySelector(".card");
+const formElements = addForm.querySelector(".form__elements");
+
+addFormSaveBtn.addEventListener("click", (evt) => {
+  evt.preventDefault();
+
+  const userPlaceTitle = document.querySelector("#userPlaceTitle").value;
+  const userPixUrl = document.querySelector("#userPixUrl").value;
+
+  const newCardElement = cardTemplate.cloneNode(true);
+  const cardImage = newCardElement.querySelector(".card__image");
+  const cardTitle = newCardElement.querySelector(".card__title");
+
+  cardImage.src = userPixUrl;
+  cardImage.alt = userPlaceTitle;
+  cardImage.setAttribute("src", userPixUrl);
+
+  cardTitle.textContent = userPlaceTitle;
+
+  cardsContainer.prepend(newCardElement);
+
+  addForm.classList.remove("visible");
+
+  const likeButtons = cardsContainer.querySelectorAll(".heart-off");
+  for (let likeButton of likeButtons) {
+    likeButton.addEventListener("click", function (event) {
+      event.target.classList.toggle("heart-on");
+    });
+  }
+});
 
 const cardsPopup = document.getElementsByClassName("cards-popup")[0];
 
