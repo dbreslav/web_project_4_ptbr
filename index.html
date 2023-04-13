@@ -8,7 +8,7 @@
 
     <title>Jacques Cousteau</title>
   </head>
-  <body>
+  <body class="body">
     <div class="page">
       <div class="header">
         <img src="./images/logo.png" alt="logo" class="header__logo" />
@@ -79,13 +79,11 @@
         </div>
       </div>
       <section class="images">
-        <template class="cards-popup">
+        <div class="cards-popup">
           <button class="cards-popup__btn"></button>
-          <p class="cards-popup__title">
-            <img src="" alt="" class="cards-popup__img" />
-          </p>
-          <div class="cards-popup__overlay"></div>
-        </template>
+          <img src="" alt="" class="cards-popup__img" />
+          <p class="cards-popup__title"></p>
+        </div>
         <ul class="cards">
           <template id="card-template">
             <li class="card">
