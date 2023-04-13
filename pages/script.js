@@ -1,26 +1,3 @@
-//function EditProfile
-
-function savePopup(evt) {
-  evt.preventDefault();
-
-  const usernameInput = document.getElementById("username");
-  const userTextInput = document.getElementById("usertext");
-  const profileName = document.getElementById("profileName");
-  const profileText = document.getElementById("profileText");
-
-  profileName.textContent = usernameInput.value;
-  profileText.textContent = userTextInput.value;
-
-  usernameInput.value = "";
-  userTextInput.value = "";
-  isPopupVisible = false;
-
-  popup.style.display = "none";
-}
-
-const savePopupButton = document.getElementById("save-btn");
-savePopupButton.addEventListener("click", savePopup);
-
 window.addEventListener("load", function () {
   const popup = document.querySelector(".popup");
   const closePopup = document.querySelector(".close-btn");
@@ -47,6 +24,27 @@ window.addEventListener("load", function () {
 
   addPopupBtn.addEventListener("click", toggleAddPopup);
   closeAddBtn.addEventListener("click", toggleAddPopup);
+
+  //function EditProfile
+
+  function savePopup(evt) {
+    evt.preventDefault();
+
+    const usernameInput = document.getElementById("username");
+    const userTextInput = document.getElementById("usertext");
+    const profileName = document.getElementById("profileName");
+    const profileText = document.getElementById("profileText");
+
+    profileName.textContent = usernameInput.value;
+    profileText.textContent = userTextInput.value;
+
+    usernameInput.value = "";
+    userTextInput.value = "";
+    togglePopup();
+  }
+
+  const savePopupButton = document.getElementById("save-btn");
+  savePopupButton.addEventListener("click", savePopup);
 
   //function initialCards
 
@@ -85,72 +83,72 @@ window.addEventListener("load", function () {
 
   const cardsContainer = document.querySelector(".cards");
   const cardsPopup = document.getElementsByClassName("cards-popup")[0];
+  const cardTemplate = document.querySelector("#card-template").content;
   function renderCards() {
-    const cardTemplate = document.querySelector("#card-template").content;
-
     initialCards.forEach((card) => {
-      const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
-      cardElement.setAttribute("id", card.id);
-      cardElement.querySelector(".card__image").setAttribute("src", card.link);
-      cardElement.querySelector(".card__image").setAttribute("alt", card.alt);
-      cardElement.querySelector(".card__title").textContent = card.name;
-
-      cardElement
-        .querySelector(".card__image")
-        .addEventListener("click", function (evt) {
-          cardsPopup.classList.toggle("visible");
-          cardsPopup
-            .querySelector(".cards-popup__img")
-            .setAttribute("src", card.link);
-          cardsPopup
-            .querySelector(".cards-popup__img")
-            .setAttribute("alt", card.alt);
-          cardsPopup.querySelector(".cards-popup__title").textContent =
-            card.name;
-        });
-
-      const cardsPopupBtn = document.querySelector(".cards-popup__btn");
-      cardsPopupBtn.addEventListener("click", function (evt) {
-        cardsPopup.classList.remove("visible");
-      });
-
-      cardElement
-        .querySelector(".trash-btn")
-        .addEventListener("click", function (evt) {
-          const parentCard = this.closest(".card");
-          parentCard.remove();
-        });
-
-      cardsContainer.appendChild(cardElement);
+      adicionarNovo(card, cardTemplate);
     });
   }
-
-  renderCards();
 
   //function that appends a new card with user info
 
   const addForm = document.querySelector(".add-form");
   const addFormSaveBtn = document.querySelector("#addFormSaveBtn");
-  const cardTemplate = document.querySelector(".card");
+
   const formElements = addForm.querySelector(".form__elements");
+
+  function adicionarNovo(card, cardTemplate, newCard = false) {
+    const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
+    cardElement.setAttribute("id", card.id);
+    cardElement.querySelector(".card__image").setAttribute("src", card.link);
+    cardElement.querySelector(".card__image").setAttribute("alt", card.alt);
+    cardElement.querySelector(".card__title").textContent = card.name;
+
+    cardElement
+      .querySelector(".card__image")
+      .addEventListener("click", function (evt) {
+        cardsPopup.classList.toggle("visible");
+        cardsPopup
+          .querySelector(".cards-popup__img")
+          .setAttribute("src", card.link);
+        cardsPopup
+          .querySelector(".cards-popup__img")
+          .setAttribute("alt", card.alt);
+        cardsPopup.querySelector(".cards-popup__title").textContent = card.name;
+      });
+
+    const cardsPopupBtn = document.querySelector(".cards-popup__btn");
+    cardsPopupBtn.addEventListener("click", function (evt) {
+      cardsPopup.classList.remove("visible");
+    });
+
+    cardElement
+      .querySelector(".trash-btn")
+      .addEventListener("click", function (evt) {
+        const parentCard = this.closest(".card");
+        parentCard.remove();
+      });
+
+    if (!newCard) {
+      cardsContainer.appendChild(cardElement);
+    } else {
+      cardsContainer.prepend(cardElement);
+    }
+  }
+  renderCards();
 
   addFormSaveBtn.addEventListener("click", (evt) => {
     evt.preventDefault();
 
     const userPlaceTitle = document.querySelector("#userPlaceTitle").value;
     const userPixUrl = document.querySelector("#userPixUrl").value;
-
-    const newCardElement = cardTemplate.cloneNode(true);
-    const cardImage = newCardElement.querySelector(".card__image");
-    const cardTitle = newCardElement.querySelector(".card__title");
-
-    cardImage.src = userPixUrl;
-    cardImage.alt = userPlaceTitle;
-    cardImage.setAttribute("src", userPixUrl);
-
-    cardTitle.textContent = userPlaceTitle;
-
-    cardsContainer.prepend(newCardElement);
+    adicionarNovo(
+      { name: userPlaceTitle, link: userPixUrl, alt: userPlaceTitle },
+      cardTemplate,
+      true
+    );
+    document.querySelector("#userPlaceTitle").value = "";
+    document.querySelector("#userPixUrl").value = "";
 
     addForm.classList.remove("visible");
 
