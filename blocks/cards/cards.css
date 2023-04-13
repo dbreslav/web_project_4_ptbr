@@ -18,5 +18,6 @@
     flex-direction: column;
     gap: 20px;
     margin: 0 4% 50px;
+    padding: 0;
   }
 }

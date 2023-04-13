@@ -21,10 +21,11 @@
 @import url(../blocks/card/card.css);
 @import url(../blocks/card/__image/card__image.css);
 
-@import url(../blocks/card-popup/card-popup.css);
-@import url(..//blocks/card-popup/__image/card-popup__image.css);
-@import url(..//blocks/card-popup/__title/card-popup__title.css);
 @import url(..//blocks/cards-popup/cards-popup.css);
+@import url(../blocks/cards-popup/__btn/cards-popup__btn.css);
+@import url(..//blocks/cards-popup/__img/cards-popup__img.css);
+@import url(..//blocks/cards-popup/__overlay/cards-popup__overlay.css);
+@import url(..//blocks/cards-popup/__title/cards-popup__title.css);
 
 @import url(..//blocks/popup-img-btn/popup-img-btn.css);
 
