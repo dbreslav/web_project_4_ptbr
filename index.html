@@ -80,12 +80,14 @@
       </div>
       <section class="images">
         <template class="cards-popup">
-          <p class="">
-            <img src="" alt="" class="" /><button class=""></button>
+          <button class="cards-popup__btn"></button>
+          <p class="cards-popup__title">
+            <img src="" alt="" class="cards-popup__img" />
           </p>
+          <div class="cards-popup__overlay"></div>
         </template>
         <ul class="cards">
-          <template>
+          <template id="card-template">
             <li class="card">
               <button class="trash-btn"></button>
               <img class="card__image" src="" alt="" />
