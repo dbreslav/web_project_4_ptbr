@@ -2,7 +2,6 @@ window.addEventListener("load", function () {
   const popup = document.querySelector(".popup");
   const closePopup = document.querySelector(".close-btn");
   const editButton = document.querySelector(".edit-btn");
-  //const trashBtn = document.querySelector(".trash-btn");
   const addPopup = document.querySelector(".add-form");
   const addPopupBtn = document.querySelector(".add");
   const closeAddBtn = document.querySelector(".close-add-btn");
@@ -76,9 +75,21 @@ window.addEventListener("load", function () {
       cardElement
         .querySelector(".card__image")
         .addEventListener("click", function (evt) {
-          //put the toggle card popup here
-          cardsPopup.toggle("visible");
+          cardsPopup.classList.toggle("visible");
+          cardsPopup
+            .querySelector(".cards-popup__img")
+            .setAttribute("src", card.link);
+          cardsPopup
+            .querySelector(".cards-popup__img")
+            .setAttribute("alt", card.alt);
+          cardsPopup.querySelector(".cards-popup__title").textContent =
+            card.name;
         });
+
+      const cardsPopupBtn = document.querySelector(".cards-popup__btn");
+      cardsPopupBtn.addEventListener("click", function (evt) {
+        cardsPopup.classList.remove("visible");
+      });
 
       cardElement
         .querySelector(".trash-btn")
@@ -127,50 +138,6 @@ window.addEventListener("load", function () {
       });
     }
   });
-
-  const cardsPopupCloseBtn =
-    document.getElementsByClassName("cards-popup__btn");
-  const cardsPopupTitle = document.getElementsByClassName("cards-popup__title");
-  const cardsPopupImage = document.getElementsByClassName("cards-popup__img");
-  const cardsPopupOverlay = document.getElementsByClassName(
-    "cards-popup__overlay"
-  );
-
-  //Function Card Image popup
-
-  // function createImgCard() {
-  //   initialCards.forEach((card) => {
-  //     const cardImg = document.createElement("div");
-  //     cardImg.classList.add("card-popup");
-
-  //     const closeImgBtn = document.createElement("button");
-  //     closeImgBtn.classList.add("popup-img-btn");
-
-  //     const imageElement = document.createElement("img");
-  //     imageElement.classList.add("card-popup__image");
-  //     imageElement.src = card.link;
-  //     imageElement.alt = card.alt;
-
-  //     const imageTitle = document.createElement("p");
-  //     imageTitle.classList.add("card-popup__title");
-  //     imageTitle.textContent = card.name;
-
-  //     cardImg.appendChild(imageElement);
-  //     cardImg.appendChild(closeImgBtn);
-  //     cardImg.appendChild(imageTitle);
-  //     cardsPopup.appendChild(cardImg);
-
-  //     function toggleCardImagePopup() {
-  //       cardImg.classList.toggle("visible");
-  //     }
-
-  //     imageElement.addEventListener("click", toggleCardImagePopup);
-
-  //     closeImgBtn.addEventListener("click", toggleCardImagePopup);
-  //   });
-  // }
-
-  // createImgCard();
 
   //toggle function for like hearts
   const likeButtons = cardsContainer.querySelectorAll(".heart-off");
