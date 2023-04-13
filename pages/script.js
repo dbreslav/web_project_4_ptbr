@@ -25,6 +25,29 @@ function toggleAddPopup() {
 addPopupBtn.addEventListener("click", toggleAddPopup);
 closeAddBtn.addEventListener("click", toggleAddPopup);
 
+//function EditProfile
+
+function savePopup(evt) {
+  evt.preventDefault();
+
+  const usernameInput = document.getElementById("username");
+  const userTextInput = document.getElementById("usertext");
+  const profileName = document.getElementById("profileName");
+  const profileText = document.getElementById("profileText");
+
+  profileName.textContent = usernameInput.value;
+  profileText.textContent = userTextInput.value;
+
+  usernameInput.value = "";
+  userTextInput.value = "";
+  isPopupVisible = false;
+
+  popup.style.display = "none";
+}
+
+const savePopupButton = document.getElementById("save-btn");
+savePopupButton.addEventListener("click", savePopup);
+
 //function initialCards
 
 const initialCards = [
