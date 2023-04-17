@@ -112,9 +112,7 @@ window.addEventListener("load", function () {
   ];
 
   const cardsContainer = document.querySelector(".cards");
-
   const cardsPopup = document.getElementsByClassName("cards-popup")[0];
-
   const cardTemplate = document.querySelector("#card-template").content;
 
   function renderCards() {
@@ -122,7 +120,6 @@ window.addEventListener("load", function () {
       adicionarNovo(card, cardTemplate);
     });
   }
-
   //function that appends a new card with user info
 
   const addForm = document.querySelector(".add-form");
@@ -210,22 +207,28 @@ window.addEventListener("load", function () {
 
     addForm.classList.remove("visible");
 
+    //====//this function only works for the newly added cards.
     const likeButtons = cardsContainer.querySelectorAll(".heart-off");
 
     for (let likeButton of likeButtons) {
       likeButton.addEventListener("click", function (event) {
+        console.log("clicked new one");
         event.target.classList.toggle("heart-on");
       });
     }
+    //======//
   });
 
   //toggle function for like hearts
 
+  //===//this function works for the old cards
   const likeButtons = cardsContainer.querySelectorAll(".heart-off");
 
   for (let likeButton of likeButtons) {
     likeButton.addEventListener("click", function (event) {
+      console.log("clicked");
       event.target.classList.toggle("heart-on");
     });
   }
+  //===/
 });
