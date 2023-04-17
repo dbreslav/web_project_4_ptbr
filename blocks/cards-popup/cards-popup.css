@@ -9,7 +9,7 @@
   opacity: 0;
   height: 0;
   z-index: 3;
-  transition: visibility 2s linear, opacity 1s linear;
+  transition: visibility 2s linear, opacity 1s linear, height 1s linear;
   overflow: hidden;
 }
 .cards-popup.visible {
@@ -18,5 +18,4 @@
   opacity: 1;
   height: 100%;
   visibility: visible;
-  transition: visibility 0 linear, opacity 1s linear;
 }
