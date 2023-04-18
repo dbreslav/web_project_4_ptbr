@@ -3,4 +3,14 @@
   border-radius: 17px;
   position: relative;
   list-style: none;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "image"
+    "title";
+  max-width: 282px;
+  height: 361px;
+  border-radius: 17px;
+  background-color: white;
+  overflow: hidden;
 }
