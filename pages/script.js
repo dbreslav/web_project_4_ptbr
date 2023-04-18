@@ -182,6 +182,14 @@ window.addEventListener("load", function () {
     } else {
       cardsContainer.prepend(cardElement);
     }
+
+    cardElement
+
+      .querySelector(".heart-off")
+
+      .addEventListener("click", function (evt) {
+        evt.target.classList.toggle("heart-on");
+      });
   }
 
   renderCards();
@@ -206,29 +214,5 @@ window.addEventListener("load", function () {
     document.querySelector("#userPixUrl").value = "Imagem URL";
 
     addForm.classList.remove("visible");
-
-    //====//this function only works for the newly added cards.
-    const likeButtons = cardsContainer.querySelectorAll(".heart-off");
-
-    for (let likeButton of likeButtons) {
-      likeButton.addEventListener("click", function (event) {
-        console.log("clicked new one");
-        event.target.classList.toggle("heart-on");
-      });
-    }
-    //======//
   });
-
-  //toggle function for like hearts
-
-  //===//this function works for the old cards
-  const likeButtons = cardsContainer.querySelectorAll(".heart-off");
-
-  for (let likeButton of likeButtons) {
-    likeButton.addEventListener("click", function (event) {
-      console.log("clicked");
-      event.target.classList.toggle("heart-on");
-    });
-  }
-  //===/
 });
